@@ -89,14 +89,6 @@
         <NavTabs
           :links="[
             {
-              label: 'Changelog',
-              href: {
-                path: `/project/${$route.params.id}/versions`,
-                query: { l: instance?.loader, g: instance?.game_version },
-              },
-              subpages: ['version'],
-            },
-            {
               label: 'Description',
               href: `/project/${$route.params.id}`,
             },
@@ -112,6 +104,10 @@
               label: 'Gallery',
               href: `/project/${$route.params.id}/gallery`,
               shown: data.gallery.length > 0,
+            },
+            {
+              label: 'Changelog',
+              href: `/project/${$route.params.id}`,
             },
           ]"
         />
